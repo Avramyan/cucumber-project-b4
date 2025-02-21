@@ -1,17 +1,36 @@
 package io.loop.utilities;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.Set;
-
 import static org.junit.Assert.assertTrue;
 
 public class BrowserUtils {
+
+public static Scenario myScenario;
+
+    /**
+     * takes screenshot
+     * @author AA
+     */
+    public static void takeScreenShot() {
+        try{
+            myScenario.log("Current url is: " + Driver.getDriver().getCurrentUrl());
+            final byte[] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            myScenario.attach(screenshot, "image/png", myScenario.getName());
+
+        }catch (WebDriverException e){
+            e.getMessage();
+
+        }catch (ClassCastException e){
+            e.getMessage();
+        }
+
+    }
+
+
     /**
      * validate if driver switched to expected URL or title
      *
@@ -42,7 +61,7 @@ public class BrowserUtils {
      * @param targetTitle
      * @author artemavramov
      */
-    public static void switcTohWindow(WebDriver driver, String targetTitle) {
+    public static void switchTohWindow(WebDriver driver, String targetTitle) {
         String origin = driver.getWindowHandle();
         for (String handle : driver.getWindowHandles()) {
             driver.switchTo().window(handle);
