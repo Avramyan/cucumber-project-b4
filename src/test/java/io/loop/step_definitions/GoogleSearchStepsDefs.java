@@ -1,19 +1,16 @@
 package io.loop.step_definitions;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.loop.pages.GoogleSearchPage;
+import io.loop.pages.POM;
 import io.loop.utilities.ConfigurationReader;
 import io.loop.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.lang.module.Configuration;
 import java.time.Duration;
 import java.util.List;
 
@@ -21,6 +18,7 @@ import static org.junit.Assert.assertEquals;
 
 public class GoogleSearchStepsDefs {
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+    POM pages = new POM();
 
     @Given("user in on Google search page")
     public void user_in_on_google_search_page() {

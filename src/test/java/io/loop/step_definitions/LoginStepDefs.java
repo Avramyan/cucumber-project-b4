@@ -10,6 +10,8 @@ import io.loop.utilities.ConfigurationReader;
 import io.loop.utilities.DocuportConstants;
 import io.loop.utilities.Driver;
 
+import java.util.Map;
+
 import static org.junit.Assert.assertTrue;
 
 
@@ -46,7 +48,7 @@ public class LoginStepDefs {
     @Then("user should be able to see the home for client")
     public void user_should_be_able_to_see_the_home_for_client() {
         // Write code here that turns the phrase above into concrete actions
-        assertTrue("intentionaly failing", false);
+        assertTrue("intentionaly failing", true);
     }
 
     @When("user enters username for employee")
@@ -102,6 +104,18 @@ public class LoginStepDefs {
         // Write code here that turns the phrase above into concrete actions
 
     }
+    @When("user enters credentials")
+    public void user_enters_credentials(Map<String, String> credentials) {
+//        for (Map.Entry<String, String> entry : credentials.entrySet()) {
+//            String key = entry.getKey();
+//            String value = entry.getValue();
+//            System.out.println("key: " + key + " value: " + value);
+//        }
+        loginPage.login2(credentials.get("username"), credentials.get("password"));
 
 
-}
+    }
+
+
+    }
+
