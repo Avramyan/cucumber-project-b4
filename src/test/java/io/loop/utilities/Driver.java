@@ -10,56 +10,53 @@ import java.time.Duration;
 public class Driver {
 
     /*
-    Creating the private constructor so this classes object is not reachable from outside
-     */
+    Creating a private constructor to prevent instantiation
+    */
     private Driver() {
     }
 
     /*
-    making driver instance private
-    static - run before everything else and use in static method
-     */
-    private static WebDriver driver;
-    /*
-    reusable method that will return the same  driver instance everytime called
-     */
+    ThreadLocal instance for WebDriver to support parallel execution
+    */
+    private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     /**
-     * singleton pattern
-     *
-     * @return
+     * Returns a singleton WebDriver instance using ThreadLocal
+     * @return WebDriver instance
      */
     public static WebDriver getDriver() {
-        if (driver == null) {
+        if (driverPool.get() == null) {  // Corrected condition
             String browserType = ConfigurationReader.getProperties("browser");
+
             switch (browserType.toLowerCase()) {
                 case "chrome":
-                    driver = new ChromeDriver();
+                    driverPool.set(new ChromeDriver());
                     break;
                 case "firefox":
-                    driver = new FirefoxDriver();
+                    driverPool.set(new FirefoxDriver());
                     break;
                 case "safari":
-                    driver = new SafariDriver();
+                    driverPool.set(new SafariDriver());
                     break;
-
+                default:
+                    throw new RuntimeException("Unsupported browser: " + browserType);
             }
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+            // Set common driver properties
+            driverPool.get().manage().window().maximize();
+            driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
-        return driver;
+
+        return driverPool.get();
     }
 
     /**
-     * closing driver
-     *
-     * @author artemavramov
+     * Closes the WebDriver and removes it from ThreadLocal
      */
     public static void closeDriver() {
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+        if (driverPool.get() != null) {
+            driverPool.get().quit();
+            driverPool.remove();
         }
     }
 }
