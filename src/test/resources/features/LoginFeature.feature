@@ -11,7 +11,7 @@ Feature: Docuport login Logout Feature
     And user click login button
     Then user should be able to see the home for client
 
-  @AA_smoke
+  @AA_smoke @test
   Scenario: Login as employee
     When user enters username for employee
     And user enters password for employee

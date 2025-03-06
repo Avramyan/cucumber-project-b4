@@ -2,6 +2,7 @@ package io.loop.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -31,20 +32,32 @@ public class Driver {
             switch (browserType.toLowerCase()) {
                 case "chrome":
                     driverPool.set(new ChromeDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "firefox":
                     driverPool.set(new FirefoxDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "safari":
                     driverPool.set(new SafariDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    break;
+                case "headless":
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless");
+                    driverPool.set(new ChromeDriver(options));
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 default:
                     throw new RuntimeException("Unsupported browser: " + browserType);
             }
 
             // Set common driver properties
-            driverPool.get().manage().window().maximize();
-            driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         }
 
         return driverPool.get();
