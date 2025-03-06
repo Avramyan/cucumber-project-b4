@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mar 2, 2025 01:26:30 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@AA_smoke</a><a class="dropdown-item" href="#">@google_search</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Google Search Functionality Title Verification</p>
+            <p class="text-sm">
+              <span>1:31:52 PM</span> / <span>00:00:15:026</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Google Search Functionality Title Verification</h5>
+<span class='badge badge-success'>03.02.2025 1:31:52 PM</span>
+<span class='badge badge-danger'>03.02.2025 1:32:07 PM</span>
+<span class='badge badge-default'>00:00:15:026</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> User Story: As user, when I am on a Google search page
+I should be able to search whatever I want and see the relevant information</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Search functionality result title verification</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.loop.step_definitions.GoogleSearchStepsDefs.user_in_on_google_search_page()">
+                <span>Given user in on Google search page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.loop.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Current url is: https://www.google.com/
+      </div>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.loop.step_definitions.GoogleSearchStepsDefs.user_types_loop_academy_in_the_google_search_box_and_clicks_enter()">
+                <span>When user types Loop Academy in the google search box and clicks enter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.loop.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Current url is: https://www.google.com/search?q=Loop+Academy&sca_esv=8b070b8b3b246bd8&source=hp&ei=GKTEZ4HkEqer5NoP0MfYqQw&iflsig=ACkRmUkAAAAAZ8SyKN-BCQv6GwuefdrChRBN7keGO_zN&ved=0ahUKEwiB0I-HhOyLAxWnFVkFHdAjNsUQ4dUDCBA&uact=5&oq=Loop+Academy&gs_lp=Egdnd3Mtd2l6IgxMb29wIEFjYWRlbXlIIlAAWCBwAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcA&sclient=gws-wiz
+      </div>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.loop.step_definitions.GoogleSearchStepsDefs.user_should_see_loop_academy_google_search_in_the_google_title()">
+                <span>Then user should see Loop Academy - Google search in the google title</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.loop.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Current url is: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLoop%2BAcademy%26sca_esv%3D8b070b8b3b246bd8%26source%3Dhp%26ei%3DGKTEZ4HkEqer5NoP0MfYqQw%26iflsig%3DACkRmUkAAAAAZ8SyKN-BCQv6GwuefdrChRBN7keGO_zN%26ved%3D0ahUKEwiB0I-HhOyLAxWnFVkFHdAjNsUQ4dUDCBA%26uact%3D5%26oq%3DLoop%2BAcademy%26gs_lp%3DEgdnd3Mtd2l6IgxMb29wIEFjYWRlbXlIIlAAWCBwAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcA%26sclient%3Dgws-wiz%26sei%3DGKTEZ5u4N9_E0PEP_YKt2AM&q=EhAmAQVAwgA_ACBoKFrBKVkWGJnIkr4GIjDnCwD5WW7f14K4hI2XoWC3aqBqy0wReYhUGmxV3mxnqi_jBTEgpRhsnxCVkmTIsl4yAXJaAUM
+      </div>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded3.png' src="../Screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log fail-bg mr-2">Fail</span>Search functionality result title verification</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="io.loop.step_definitions.GoogleSearchStepsDefs.user_in_on_google_search_page()">
+                <span>Given user in on Google search page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.loop.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Current url is: https://www.google.com/
+      </div>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded4.png' src="../Screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="io.loop.step_definitions.GoogleSearchStepsDefs.user_types_in_google_searchbox_and_clicks_enter(java.lang.String)">
+                <span>When user types "Loop academy" in google searchBox and clicks enter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.loop.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Current url is: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLoop%2Bacademy%26sca_esv%3D8b070b8b3b246bd8%26source%3Dhp%26ei%3DGqTEZ5jQJYmliLMP3r2j4A4%26iflsig%3DACkRmUkAAAAAZ8SyKmfkbs95Y-6baksJoB6d_zoTL1hY%26ved%3D0ahUKEwiYxZyIhOyLAxWJEmIAHd7eCOwQ4dUDCBA%26uact%3D5%26oq%3DLoop%2Bacademy%26gs_lp%3DEgdnd3Mtd2l6IgxMb29wIGFjYWRlbXlIHlAAWB1wAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcA%26sclient%3Dgws-wiz%26sei%3DG6TEZ-GNCdaF0PEPt4KB8Ac&q=EhAmAQVAwgA_ACBoKFrBKVkWGJvIkr4GIjBHfq4B7sIKpVzodNRufozgNOmuTLhfpDWckWsgci3KvMA4vRn4xfnVExOtmtUkMygyAXJaAUM
+      </div>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded5.png' src="../Screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="io.loop.step_definitions.GoogleSearchStepsDefs.user_should_see_in_the_google_title(java.lang.String)">
+                <span>Then user should see "Loop academy - Google Search" in the google title</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be "Loop academy - Google Search". Current title: "https://www.google.com/search?q=Loop+academy&sca_esv=8b070b8b3b246bd8&source=hp&ei=GqTEZ5jQJYmliLMP3r2j4A4&iflsig=ACkRmUkAAAAAZ8SyKmfkbs95Y-6baksJoB6d_zoTL1hY&ved=0ahUKEwiYxZyIhOyLAxWJEmIAHd7eCOwQ4dUDCBA&uact=5&oq=Loop+academy&gs_lp=Egdnd3Mtd2l6IgxMb29wIGFjYWRlbXlIHlAAWB1wAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcA&sclient=gws-wiz&sei=G6TEZ-GNCdaF0PEPt4KB8Ac" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '15.3', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: /var/folders/bc/dh9t9s315gs...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59824}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59824/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ed121ec9d39a3fac85cb66d4030101e6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at io.loop.step_definitions.GoogleSearchStepsDefs.user_should_see_in_the_google_title(GoogleSearchStepsDefs.java:71)
+	at ✽.user should see "Loop academy - Google Search" in the google title(file:///Users/artemavramov/IdeaProjects/cucumber-project-b4/src/test/resources/features/google_search.feature:15)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>io.loop.step_definitions.Hook.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>Current url is: https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3DLoop%2Bacademy%26sca_esv%3D8b070b8b3b246bd8%26source%3Dhp%26ei%3DGqTEZ5jQJYmliLMP3r2j4A4%26iflsig%3DACkRmUkAAAAAZ8SyKmfkbs95Y-6baksJoB6d_zoTL1hY%26ved%3D0ahUKEwiYxZyIhOyLAxWJEmIAHd7eCOwQ4dUDCBA%26uact%3D5%26oq%3DLoop%2Bacademy%26gs_lp%3DEgdnd3Mtd2l6IgxMb29wIGFjYWRlbXlIHlAAWB1wAHgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIAoAIAmAMAkgcAoAcA%26sclient%3Dgws-wiz%26sei%3DG6TEZ-GNCdaF0PEPt4KB8Ac&q=EhAmAQVAwgA_ACBoKFrBKVkWGJvIkr4GIjBHfq4B7sIKpVzodNRufozgNOmuTLhfpDWckWsgci3KvMA4vRn4xfnVExOtmtUkMygyAXJaAUM
+      </div>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded6.png' src="../Screenshots/embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>io.loop.step_definitions.Hook.after(io.cucumber.java.Scenario)</span>
+      <div>Search functionality result title verification
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded7.png' src="../Screenshots/embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.TimeoutException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:31:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Then user should see "Loop academy - Google Search" in the google title</a>
+<div class="">
+<span class="badge badge-default">Google Search Functionality Title Verification.Search functionality result title verification.Then user should see "Loop academy - Google Search" in the google title</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@AA_smoke</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AA_smoke</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:31:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Search functionality result title verification</a>
+<div class="">
+<span class="badge badge-default">Google Search Functionality Title Verification.Search functionality result title verification</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:31:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Search functionality result title verification</a>
+<div class="">
+<span class="badge badge-default">Google Search Functionality Title Verification.Search functionality result title verification</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@google_search</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@google_search</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:31:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Search functionality result title verification</a>
+<div class="">
+<span class="badge badge-default">Google Search Functionality Title Verification.Search functionality result title verification</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:31:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Search functionality result title verification</a>
+<div class="">
+<span class="badge badge-default">Google Search Functionality Title Verification.Search functionality result title verification</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Mar 2, 2025 01:26:30 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Mar 2, 2025 01:32:07 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'><b>1</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='50%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='92%'><b>12</b> steps passed</small></div>
+<div>
+<small data-tooltip='7%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Google Search Functionality Title Verification":15.026
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@AA_smoke</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@google_search</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 1,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 12,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
