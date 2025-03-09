@@ -3,6 +3,7 @@ package io.loop.step_definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.loop.pages.HomePage;
 import io.loop.pages.LoginPage;
 import io.loop.utilities.BrowserUtils;
 import io.loop.utilities.ConfigurationReader;
@@ -17,6 +18,8 @@ import static org.junit.Assert.assertTrue;
 
 public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
+    HomePage homePage = new HomePage();
+
 
     @Given("user is on Docuport login page")
     public void user_is_on_docuport_login_page() {
@@ -48,7 +51,7 @@ public class LoginStepDefs {
     @Then("user should be able to see the home for client")
     public void user_should_be_able_to_see_the_home_for_client() {
         // Write code here that turns the phrase above into concrete actions
-        assertTrue("intentionaly failing", true);
+
     }
 
     @When("user enters username for employee")
@@ -104,6 +107,7 @@ public class LoginStepDefs {
         // Write code here that turns the phrase above into concrete actions
 
     }
+
     @When("user enters credentials")
     public void user_enters_credentials(Map<String, String> credentials) {
 //        for (Map.Entry<String, String> entry : credentials.entrySet()) {
@@ -117,5 +121,5 @@ public class LoginStepDefs {
     }
 
 
-    }
+}
 
