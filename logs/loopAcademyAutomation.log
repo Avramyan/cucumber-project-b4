@@ -1,6 +1,6 @@
-02.03.2025 14:20:48 INFO  ProductSteps:48 - Validation of the price for: Laptops, Product: Sony vaio i5 - Expected: 790 - Actual: 790
-02.03.2025 14:20:48 INFO  ProductSteps:48 - Validation of the price for: Laptops, Product: Sony vaio i7 - Expected: 790 - Actual: 790
-02.03.2025 14:20:48 INFO  ProductSteps:48 - Validation of the price for: Laptops, Product: MacBook air - Expected: 700 - Actual: 700
-02.03.2025 14:20:48 INFO  ProductSteps:48 - Validation of the price for: Monitors, Product: Apple monitor 24 - Expected: 400 - Actual: 400
-02.03.2025 14:20:48 INFO  ProductSteps:48 - Validation of the price for: Monitors, Product: ASUS Full HD - Expected: 230 - Actual: 230
-02.03.2025 14:20:48 INFO  Hook:42 - .....FINISH AUTOMATION......LOOPCAMP
+09.03.2025 09:15:52 INFO  SampleDocuportStepDefs:45 - Received Doc - was successfully clicked
+09.03.2025 09:15:52 INFO  SampleDocuportStepDefs:49 - Search - was successfully clicked
+09.03.2025 09:15:52 INFO  SampleDocuportStepDefs:30 - tax document - was successfully sent to -  Document name
+09.03.2025 09:15:53 INFO  SampleDocuportStepDefs:49 - Tags - was successfully clicked
+09.03.2025 09:15:53 INFO  SampleDocuportStepDefs:30 - Paystub - was successfully sent to -  Tags
+09.03.2025 09:15:53 INFO  Hook:42 - .....FINISH AUTOMATION......LOOPCAMP

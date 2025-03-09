@@ -38,7 +38,7 @@ public class Hook {
     }
     @AfterAll
             public static void afterAll() {
-        Driver.closeDriver();
+//        Driver.closeDriver();
   LOG.info(".....FINISH AUTOMATION......LOOPCAMP");
     }
 }
