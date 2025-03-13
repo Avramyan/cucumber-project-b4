@@ -1,6 +1,1 @@
-09.03.2025 09:15:52 INFO  SampleDocuportStepDefs:45 - Received Doc - was successfully clicked
-09.03.2025 09:15:52 INFO  SampleDocuportStepDefs:49 - Search - was successfully clicked
-09.03.2025 09:15:52 INFO  SampleDocuportStepDefs:30 - tax document - was successfully sent to -  Document name
-09.03.2025 09:15:53 INFO  SampleDocuportStepDefs:49 - Tags - was successfully clicked
-09.03.2025 09:15:53 INFO  SampleDocuportStepDefs:30 - Paystub - was successfully sent to -  Tags
-09.03.2025 09:15:53 INFO  Hook:42 - .....FINISH AUTOMATION......LOOPCAMP
+11.03.2025 08:37:58 ERROR ExcelUtils:156 - Column name 'A' not found in Excel sheet.

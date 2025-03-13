@@ -1,5 +1,6 @@
 package io.loop.pages;
 
+import io.loop.utilities.ConfigurationReader;
 import io.loop.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class ProductPage {
-    private WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10)); // Initialize wait
+    private WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts")))); // Initialize wait
 
     public ProductPage() {
         PageFactory.initElements(Driver.getDriver(), this);

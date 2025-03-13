@@ -67,7 +67,7 @@ public class GoogleSearchStepsDefs {
 
     @Then("user should see {string} in the google title")
     public void user_should_see_in_the_google_title(String expectedTitle) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
         wait.until(ExpectedConditions.titleIs("Loop academy - Google Search"));
         String actualTitle = Driver.getDriver().getTitle();
         assertEquals("Expected does not match actual title", expectedTitle, actualTitle);

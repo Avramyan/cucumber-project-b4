@@ -23,7 +23,7 @@ public class LeftNavigatePage {
     public WebElement receivedDocsButton;
 
     @FindBy(xpath = "//span[contains(text(),'My uploads')]")
-    public WebElement myUploadsButton;
+    public WebElement myUploads;
 
     @FindBy(xpath = "//span[contains(text(),'Invitations')]")
     public WebElement invitationsButton;
@@ -40,8 +40,8 @@ public class LeftNavigatePage {
                 BrowserUtils.waitForClickable(homeButton, 10).click();
                 break;
 
-            case "myUploads":
-                BrowserUtils.waitForClickable(myUploadsButton, 10).click();
+            case "upload":
+                BrowserUtils.waitForClickable(uploadButton, 10).click();
                 break;
 
             case "invitations":
@@ -50,6 +50,10 @@ public class LeftNavigatePage {
 
             case "terms and conditions":
                 BrowserUtils.waitForClickable(termsAndConditionsButton, 10).click();
+                break;
+
+            case "my uploads":
+                BrowserUtils.waitForVisible(myUploads, 10).click();
                 break;
 
             default: throw new IllegalArgumentException("Not such a button: " + button);
