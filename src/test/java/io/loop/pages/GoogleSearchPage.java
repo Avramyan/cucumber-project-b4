@@ -1,5 +1,6 @@
 package io.loop.pages;
 
+import io.loop.utilities.ConfigurationReader;
 import io.loop.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +29,7 @@ public class GoogleSearchPage {
 
     public void handleCaptcha(WebDriver driver, WebElement captchaElement) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.valueOf(ConfigurationReader.getProperties("timeouts"))));
 
             // Switch to reCAPTCHA iframe
             WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//iframe[@title='reCAPTCHA']")));
