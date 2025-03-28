@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.loop.test</groupId>
-    <artifactId>G1_Docuport</artifactId>
+    <artifactId>cucumber-project-b4</artifactId> <!-- Change this -->
     <version>1.0-SNAPSHOT</version>
+    <name>cucumber-project-b4</name> <!-- Change this -->
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
